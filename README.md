@@ -78,10 +78,10 @@ Your README.md should include:
 - Tasks are sorted with incomplete tasks appearing before completed ones.
 - Deleting a non-completed task requires user confirmation.
 - Basic input validation to prevent empty tasks from being added.
-- Responsive layout
-- Use of utils.ts for utility functions.
-- Use of Task.ts for custom Task type
-- Use of TaskStorage.ts for local storage management (avoiding usage of global variables).
+- Responsive layout.
+- Use of `utils.ts` for utility functions.
+- Use of `Task.ts` for custom Task type.
+- Use of `TaskStorage.ts` for local storage management (avoiding usage of global variables).
 
 ## Further improvements
 - Implement a filter to show only completed or incomplete tasks.
