@@ -74,9 +74,6 @@ Your README.md should include:
     ```
 5. Visit `http://localhost:5173/` in your browser.
 
-## Known issues
-
-
 ## Bonus features implemented
 - Task counter that displays the number of completed tasks, and changes color when all tasks are completed.
 - Tasks are sorted with incomplete tasks appearing before completed ones.
