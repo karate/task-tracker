@@ -42,11 +42,20 @@ export default class TaskStore {
   }
 
   private save(): void {
-    localStorage.setItem('TASKS', JSON.stringify(this.tasks))
+    try {
+      localStorage.setItem('TASKS', JSON.stringify(this.tasks))
+    } catch (e) {
+      alert('Could not save tasks: ' + (e instanceof Error ? e.message : e))
+    }
   }
 
   private load(): void {
-    const savedTasks = localStorage.getItem('TASKS')
-    this.tasks = savedTasks ? JSON.parse(savedTasks) : []
+    try {
+      const savedTasks = localStorage.getItem('TASKS')
+      this.tasks = savedTasks ? JSON.parse(savedTasks) : []
+    } catch (e) {
+      alert('Could not load tasks: ' + (e instanceof Error ? e.message : e))
+      this.tasks = []
+    }
   }
 }
