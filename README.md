@@ -90,3 +90,4 @@ Your README.md should include:
 - Implement drag-and-drop functionality to reorder tasks.
 - Unit testing
 - Design a better confirmation dialog for deleting tasks.
+- Group completed and incomplete tasks visually.
