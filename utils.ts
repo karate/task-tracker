@@ -17,16 +17,6 @@ export function updateTaskCounter(taskStore: TaskStore): void {
     }
 }
 
-
-export function updateTask(task: Task, taskStore: TaskStore): void {
-  // Update task in Store
-  taskStore.update(task)
-  // Update task in DOM
-  const taskElement = document.getElementById(task.id)
-  taskElement?.classList.toggle('completed', task.completed)
-
-}
-
 export function populateTaskList(taskStore: TaskStore): any {
   const taskList = document.querySelector<HTMLUListElement>('#task-list')
   // Delete taskList contents
@@ -58,7 +48,7 @@ export function createTaskElement(task: Task, taskStore: TaskStore): HTMLLIEleme
       task.completed = taskCheckbox.checked
       // Update local storage
       taskStore.update(task)
-      updateTask(task, taskStore)
+      populateTaskList(taskStore)
       updateTaskCounter(taskStore)
     })
     newTask.appendChild(taskCheckbox)
