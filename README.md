@@ -60,15 +60,19 @@ Your README.md should include:
 
 ## How to run the app
 1. Ensure you have node version 20.19.0 or higher installed.
-2. Install dependencies by running:
+2. Clone the repository:
+   ```bash
+   https://github.com/karate/mts-assignment.git
+    ```
+3. Install dependencies by running:
    ```bash
    npm install
    ```
-3. Run development server:
+4. Run development server:
     ```bash
     npm run dev
     ```
-4. Visit `http://localhost:5173/` in your browser.
+5. Visit `http://localhost:5173/` in your browser.
 
 ## Known issues
 
