@@ -1,18 +1,15 @@
 // Inport Task type from Task.ts
 import type { Task } from './Task'
 import { populateTaskList, updateTaskCounter } from './utils'
-import TaskStore from './TaskStore'
+import * as taskStore from './taskStore'
 
 const form = document.querySelector<HTMLFormElement>('#task-form')
-const taskStore = new TaskStore()
 
 // Load tasks from local storage if available
-const storedTasks = localStorage.getItem('TASKS')
-const storedTasksArray = await JSON.parse(storedTasks || '[]') as Task[]
-taskStore.addAll(storedTasksArray)
+taskStore.loadFromStorage()
 
-populateTaskList(taskStore)
-updateTaskCounter(taskStore)
+populateTaskList()
+updateTaskCounter()
 
 // When user submits the form, add the task to the task-list
 form?.addEventListener('submit', (event) => {
@@ -28,8 +25,8 @@ form?.addEventListener('submit', (event) => {
       createdAt: new Date(),
     }
     taskStore.add(task) // Add task to the task store
-    populateTaskList(taskStore)
-    updateTaskCounter(taskStore)
+    populateTaskList()
+    updateTaskCounter()
     // Clear the input field
     taskInput.value = ''
   }
