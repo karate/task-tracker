@@ -62,7 +62,7 @@ Your README.md should include:
 1. Ensure you have node version 20.19.0 or higher installed.
 2. Clone the repository:
    ```bash
-   https://github.com/karate/mts-assignment.git
+   git clone https://github.com/karate/task-tracker.git
     ```
 3. Install dependencies by running:
    ```bash
